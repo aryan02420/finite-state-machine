@@ -1,0 +1,1 @@
+type TAlphabet = '0' | '1'
