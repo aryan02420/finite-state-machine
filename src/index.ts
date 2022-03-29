@@ -81,16 +81,8 @@ const FSM = () => {
 }
 
 
-const f = FSM()
-f.addState('even')
-f.addState('odd')
-f.getState('even').addTransition('0', 'odd')
-f.getState('even').addTransition('1', 'even')
-f.getState('odd').addTransition('0', 'even')
-f.getState('odd').addTransition('1', 'odd')
-f.setInitialState('even')
-f.init()
+export {
+  FSM
+}
 
-'0001011101011'.split('').forEach(char => {
-  console.log(`${f.getCurrentState()}\t-- ${char} -->\t${f.next(char)}`)
-})
+
